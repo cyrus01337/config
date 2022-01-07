@@ -10,16 +10,16 @@
         "sourceType": "module"
     },
     "rules": {
-        "computed-property-spacing": ["always", "warn"],
-        "linebreak-style": ["warn", "windows"],
+        "computed-property-spacing": "warn",
+        "linebreak-style": ["warn", "unix"],
         "max-depth": ["warn", 3],
         "no-unused-private-class-members": "warn",
         "no-use-before-define": "error",
-        "object-curly-spacing": ["always", "warn"],
+        "object-curly-spacing": "warn",
         "operator-linebreak": ["warn", "after"],
         "quotes": ["error", "double"],
         "semi": ["warn", "always"],
-        "spaced-comment": ["always", "warn"],
+        "spaced-comment": "warn",
         "indent": ["warn", 4, {
             "offsetTernaryExpressions": true,
             "VariableDeclarator": "first"
