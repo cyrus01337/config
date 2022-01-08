@@ -13,7 +13,7 @@ module.exports = {
                 use: ["style-loader", "css-loader"]
             },
             {
-                include: path.resolve("./src/images"),
+                include: path.resolve("./src/map"),
                 test: /\.(png|svg|jpe?g|gif)$/i,
                 type: "asset/resource"
             },

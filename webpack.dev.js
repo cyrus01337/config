@@ -1,9 +1,9 @@
 "use strict";
 let { merge } = require("webpack-merge");
 
-let common = require("./webpack.common.cjs");
+let common = require("./webpack.common.js");
 
-let fallback = [];
+let fallback = ["ol"];
 
 
 function resolveFallbacks() {
