@@ -1,5 +1,6 @@
 {
     "env": {
+        "browser": true,
         "es2021": true,
         "node": true
     },
@@ -9,19 +10,19 @@
         "ecmaVersion": 2021,
         "sourceType": "module"
     },
+    "root": true,
     "rules": {
         "computed-property-spacing": "warn",
         "linebreak-style": ["warn", "unix"],
         "max-depth": ["warn", 3],
         "no-unused-private-class-members": "warn",
         "no-use-before-define": "error",
-        "object-curly-spacing": "warn",
+        "object-curly-spacing": ["warn", "always"],
         "operator-linebreak": ["warn", "after"],
         "quotes": ["error", "double"],
         "semi": ["warn", "always"],
         "spaced-comment": "warn",
         "indent": ["warn", 4, {
-            "offsetTernaryExpressions": true,
             "VariableDeclarator": "first"
         }]
     }
