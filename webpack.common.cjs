@@ -1,6 +1,18 @@
 "use strict";
 const path = require("path");
 
+
+function resolveFallbacks(...libraries) {
+    let fallbacks = {};
+
+    for (const library of libraries) {
+        fallbacks[library] = require.resolve(library);
+    }
+
+    return fallbacks;
+}
+
+
 module.exports = {
     context: path.resolve("./"),
     entry: {
@@ -13,7 +25,7 @@ module.exports = {
                 use: ["style-loader", "css-loader"]
             },
             {
-                include: path.resolve("./src/map"),
+                include: path.resolve("./src"),
                 test: /\.(png|svg|jpe?g|gif)$/i,
                 type: "asset/resource"
             },
@@ -26,12 +38,12 @@ module.exports = {
         ]
     },
     output: {
-        clean: true,
         path: path.resolve("./dist")
     },
     resolve: {
         enforceExtension: false,
         extensions: ["...", ".mjs"],
+        fallback: resolveFallbacks(),
         preferRelative: true
     }
 };

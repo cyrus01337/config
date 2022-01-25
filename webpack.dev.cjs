@@ -3,19 +3,6 @@ let { merge } = require("webpack-merge");
 
 let common = require("./webpack.common.cjs");
 
-let fallback = ["ol"];
-
-
-function resolveFallbacks() {
-    let fallbacks = {};
-
-    for (const library of fallback) {
-        fallbacks[library] = require.resolve(library);
-    }
-
-    return fallbacks;
-}
-
 
 module.exports = merge(common, {
     bail: true,
@@ -38,7 +25,7 @@ module.exports = merge(common, {
     },
     devtool: "eval-source-map",
     mode: "development",
-    resolve: {
-        fallback: resolveFallbacks()
+    output: {
+        clean: true,
     }
 });
