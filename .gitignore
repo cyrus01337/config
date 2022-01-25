@@ -126,5 +126,4 @@ dist
 .pnp.*
 
 # Custom
-test.*
 dist/
