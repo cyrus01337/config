@@ -30,6 +30,7 @@ module.exports = {
                 type: "asset/resource"
             },
             {
+                exclude: /node_modules/,
                 resolve: {
                     fullySpecified: false
                 },
