@@ -14,6 +14,7 @@
         "computed-property-spacing": "warn",
         "linebreak-style": ["warn", "unix"],
         "max-depth": ["warn", 3],
+        "no-inner-declarations": "off",
         "no-unused-private-class-members": "warn",
         "no-use-before-define": "error",
         "object-curly-spacing": ["warn", "always"],
