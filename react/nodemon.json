@@ -1,0 +1,7 @@
+{
+    "env": {
+        "NODE_ENV": "development"
+    },
+    "ext": "mjs,jsx",
+    "watch": ["./app.mjs", "./src"]
+}

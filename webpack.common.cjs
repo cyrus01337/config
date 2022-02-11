@@ -1,16 +1,7 @@
 "use strict";
 const path = require("path");
 
-
-function resolveFallbacks(...libraries) {
-    let fallbacks = {};
-
-    for (const library of libraries) {
-        fallbacks[library] = require.resolve(library);
-    }
-
-    return fallbacks;
-}
+const utils = require("./utils.cjs");
 
 
 module.exports = {
@@ -44,7 +35,7 @@ module.exports = {
     resolve: {
         enforceExtension: false,
         extensions: ["...", ".mjs"],
-        fallback: resolveFallbacks(),
+        fallback: utils.resolveFallbacks(),
         preferRelative: true
     }
 };
