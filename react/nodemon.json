@@ -2,6 +2,7 @@
     "env": {
         "NODE_ENV": "development"
     },
-    "ext": "mjs,jsx",
+    "ext": "mjs",
+    "ignore": ["*.jsx"],
     "watch": ["./app.mjs", "./src"]
 }
