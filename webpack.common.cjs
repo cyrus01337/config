@@ -1,8 +1,6 @@
 "use strict";
 const path = require("path");
 
-const utils = require("./utils.cjs");
-
 
 module.exports = {
     context: path.resolve("./"),
@@ -35,7 +33,6 @@ module.exports = {
     resolve: {
         enforceExtension: false,
         extensions: ["...", ".mjs"],
-        fallback: utils.resolveFallbacks(),
         preferRelative: true
     }
 };
