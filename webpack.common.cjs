@@ -1,12 +1,33 @@
 "use strict";
 const path = require("path");
 
+const glob = require("glob");
+
+
+function getEntries() {
+    let entries = {};
+    let directories = glob.sync("./src/routes/**/entry.mjs");
+    let names = directories.map(route => route.toLowerCase())
+        .map(lowered => path.dirname(lowered))
+        .map(parent => path.basename(parent));
+
+    for (let i = 0; i < directories.length; i++) {
+        let name = names[i];
+        let directory = directories[i];
+        let actualName = name === "routes" ?
+            "index" :
+            name;
+
+        entries[actualName] = directory;
+    }
+
+    return entries;
+}
+
 
 module.exports = {
     context: path.resolve("./"),
-    entry: {
-        index: "./src/routes/entry.mjs"
-    },
+    entry: getEntries(),
     module: {
         rules: [
             {

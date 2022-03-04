@@ -5,6 +5,9 @@ const common = require("../webpack.common.cjs");
 
 
 module.exports = merge(common, {
+    experiments: {
+        topLevelAwait: true
+    },
     module: {
         rules: [
             {
