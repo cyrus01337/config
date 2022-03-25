@@ -1,0 +1,32 @@
+{
+    "name": "config",
+    "version": "1.0.0",
+    "description": "Config file templates I want to ensure are consistent throughout most projects",
+    "engines": {
+        "node": "16.x"
+    },
+    "dependencies": {
+        "glob": "^7.2.0",
+        "mini-css-extract-plugin": "^2.6.0",
+        "webpack": "^5.70.0",
+        "webpack-cli": "^4.9.2",
+        "webpack-merge": "^5.8.0"
+    },
+    "scripts": {
+        "lint": "eslint ./**/.mjs",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cyrus01337/config.git"
+    },
+    "author": "cyrus01337",
+    "license": "UNLICENSED",
+    "bugs": {
+        "url": "https://github.com/cyrus01337/config/issues"
+    },
+    "homepage": "https://github.com/cyrus01337/config#readme",
+    "devDependencies": {
+        "eslint": "^8.11.0"
+    }
+}

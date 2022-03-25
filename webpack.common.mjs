@@ -1,7 +1,6 @@
-"use strict";
-const path = require("path");
+import path from "path";
 
-const glob = require("glob");
+import glob from "glob";
 
 
 function getEntries() {
@@ -25,7 +24,7 @@ function getEntries() {
 }
 
 
-module.exports = {
+export default {
     context: path.resolve("./"),
     entry: getEntries(),
     module: {
@@ -40,11 +39,11 @@ module.exports = {
                 type: "asset/resource"
             },
             {
-                exclude: /node_modules/,
+                exclude: path.resolve("./node_modules"),
                 resolve: {
                     fullySpecified: false
                 },
-                test: /\.mjs/i
+                test: /\.mjs$/i
             }
         ]
     },

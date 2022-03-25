@@ -1,17 +1,17 @@
-"use strict";
-const { merge } = require("webpack-merge");
+import path from "path";
 
-const common = require("../webpack.common.cjs");
+import { merge } from "webpack-merge";
 
+import common from "../webpack.common.mjs";
 
-module.exports = merge(common, {
+export default merge(common, {
     experiments: {
         topLevelAwait: true
     },
     module: {
         rules: [
             {
-                exclude: /node_modules/,
+                exclude: path.resolve("./node_modules"),
                 resolve: {
                     fullySpecified: false
                 },

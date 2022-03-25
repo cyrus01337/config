@@ -1,11 +1,9 @@
-"use strict";
-let { merge } = require("webpack-merge");
+import { merge } from "webpack-merge";
 
-let common = require("./webpack.common.cjs");
+import common from "./webpack.common.mjs";
 
 
-module.exports = merge(common, {
-    bail: true,
+export default merge(common, {
     devServer: {
         client: {
             progress: true
